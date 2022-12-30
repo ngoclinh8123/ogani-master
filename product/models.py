@@ -13,6 +13,7 @@ class Product(models.Model):
     active=models.BooleanField(default=True)
     price=models.IntegerField(default=0)
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
+    product_img=models.CharField(max_length=255,default='')
 
 class Variation(models.Model):
     product=models.ForeignKey(Product,on_delete=models.CASCADE)
